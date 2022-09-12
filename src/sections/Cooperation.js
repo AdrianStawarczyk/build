@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import img4 from '../assets/coop.jpg'
-import img5 from '../assets/costred.png'
-import img6 from '../assets/media.png'
+import img4 from '../assets/tooba.jpeg'
+import img5 from '../assets/salesup.jpg'
+import img6 from '../assets/worket.jpg'
+import img7 from '../assets/coop.jpg'
+import Card from '../components/Card'
 
 const Section = styled.section`
 position: relative;
@@ -28,10 +30,41 @@ h2{
     line-height: 3.5rem;
     color: #333;
 }
-.LeftRight{
-    display: flex;
-    flex-direction: row;
+.Wrapper{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit,
+        minmax(16rem, 19rem));
+    gap: 5rem;
+    justify-content: center;
+    margin-bottom: 10%;
 }
+.card{
+    overflow: hidden;
+    box-shadow:0 2px 20px #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    .card-img{
+    height: 12rem;
+    width: 100%;
+    margin-left: 0;
+    object-fit: cover;
+    }
+    .card-title{
+        margin:0;
+        font-size: 1.1rem;
+        line-height: 2rem;
+        font-weight: 600;
+        padding: 1rem;
+    }
+    .card-description{
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+
 @media (max-width: 768px) {
     flex-direction: column;
     margin: 0 0;
@@ -80,9 +113,7 @@ text-shadow: 2px 2px #222;
     color: #f2f2f2;
     text-shadow: 2px 2px #222; 
     display: flex;  
-    flex-direction: column;
-
-    
+    flex-direction: column; 
     justify-content: center;
     text-align: center;
     font-size: 3rem;
@@ -156,21 +187,24 @@ img{
 `
 
 
+
 const Cooperation = () => {
   return (
     <Section>
         <Title data-scroll data-scroll-speed='-2' data-scroll-direction='horizontal'>
             Współpraca
         </Title>
-        <img src={img4} alt='Cooperation' className='wall-img'/>
+        <img src={img7} alt='Cooperation' className='wall-img'/>
         <h2>W Homeeer jesteśmy otwarci na podjęcie współpracy z producentami materiałów budowlnaych, 
             architektami czy składami budowlanymi.            <br /><br />
             W zamian oferujemy: 
         </h2>
-        <div className='LeftRight'>
+         {
+         /* <div className='LeftRight'>
+          
             <Left>
                 <h3>
-                    Zwiększenie sprzedaży poprzez udostępnienie swoich produktów tysiącom potencjalnych klientów. 
+                    Zwiększenie sprzedaży poprzez udostępnienie swoich produktów. 
                     <br /><br /><br /><br />
                 </h3>
                 <h3>
@@ -212,6 +246,34 @@ const Cooperation = () => {
                     - bezpłatny dostęp, prowizję pobieramy po zrealizowanym zleceniu!<br/></p>
                 <br/><br/>
             </Right>
+            </div>
+  */}
+        
+
+        <div className='Wrapper'>
+            <Card 
+            img  = {img5} 
+            title="Zwiększenie sprzedaży"
+            description="Poprzez udostępnienie swoich produktów w naszym
+             serwisie będą one dostępne dla ponad 1 miliona osób odwiedzających."
+            />
+            <Card
+            img  = {img4}
+            title="Wspołpraca z tooba.pl."
+            description="Działamy razem z tooba.pl, 
+            co przekłada się na 10 000 sprzedanych projektów domów każdego roku, 
+            w których mogą zawarte być Twoje produkty!"
+            />
+            <Card 
+            img = {img6}
+            title=" 
+            Dostęp do obsługi serwisowej WORKET"
+            description=" 
+            Poszerzenie usług, dzięki prostemu systemowi składania ofert, 
+            bazującego na kilku kliknięciach WORKET, 
+            zagwarantuje bezpłatny dostęp do zleceń.
+           "
+            />
         </div>
     </Section>
   )

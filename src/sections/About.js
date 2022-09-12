@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import img1 from '../assets/menu.png'
-import img2 from '../assets/menu2.png'
 import img3 from '../assets/screen.png'
 
 const Section = styled.section`
@@ -25,19 +23,22 @@ font-weight: 300;
 position: absolute;
 justify-content: center;
 text-align: center;
-top: 2rem;
+top: 3rem;
 left: 30%;
 z-index: 5;
 @media (max-width: 768px) {
-    display: flex;  
+  display: flex;  
     flex-direction: column;
     margin-bottom: 20%;
-    margin-top: 10%;
-    left: 10%;
+    margin-top: 15%;
+    left: none;
     justify-content: center;
     text-align: center;
     font-size: 2rem;
   }
+ 
+
+
 `
 
 const Left = styled.div`
@@ -46,7 +47,7 @@ font-size: ${props => props.theme.fontlg};
 font-weight: 300;
 position: relative;
 z-index: 5;
-margin-top: 10%;
+margin-top: 15%;
 margin-left: 10%;
 padding-right: 5%;
 display: flex;
@@ -64,7 +65,7 @@ flex-direction: column;
     flex-direction: column;
     width: 80%;
     text-align: center;
-    margin-top: 40%;
+    margin-top: 0%;
     h2{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -72,6 +73,7 @@ flex-direction: column;
     line-height: 1.5rem;
     margin: 1.5rem 0;
     color: rgba(0,0,0,.85);
+    
     }
   }
  
@@ -82,39 +84,24 @@ const Right = styled.div`
     position: relative;
     margin-right: 10%;
 .small-img-3{
-    position: absolute;
-    width: 50%;
+    position: relative;
+    width: 100%;
     height: auto;
-    left: 65%;
-    top: 55%;
+    left: 5%;
+    top: 30%;
+    margin-bottom: 40%;
 }
-.small-img-1{
-    width: 80%;
-    height: auto;
-    position: absolute;
-    left: 40%;
-    bottom: 40%;
-}
-.small-img-2{
-    width: 50%;
-    position: absolute;
-    left: 15%;
-    bottom: 10%;
-}
+
 @media (max-width: 768px) {
-   display: none;   
-    .small-img-2{
-   display:none;
-}
+    
+  width: 100%;
 .small-img-3{
-   display: none;
+display: none;
 }
-.small-img-1{
-  display: none;
 }
-  }
 
 `
+
 
 const About = () => {
   return (
@@ -145,17 +132,9 @@ const About = () => {
         </Left>
         <Right >
             <img
-            data-scroll
-            data-scroll-speed="2"
+          
             src={img3} alt='About Us' className='small-img-3'/>
-            <img 
-            data-scroll
-            data-scroll-speed="6"
-            src={img2} className='small-img-1' alt='About Us' />
-            <img 
-            data-scroll
-            data-scroll-speed="3"    
-            src={img1}  alt='About Us' className='small-img-2' />
+          
         </Right>
     </Section>
   )

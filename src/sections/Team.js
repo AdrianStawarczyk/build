@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import img7 from '../assets/who.jpg'
-import img8 from '../assets/bulp.jpg'
+import img8 from '../assets/u.jpg'
 
 const Title = styled.h1`
 color: ${props => props.theme.body};
@@ -137,7 +137,7 @@ const Team = () => {
             <img src={img7} alt='Teams' className='team-img'/>
             <br></br>
             <br></br>
-            Podczas realizacji platformy HomeeeR współpracowaliśmy ściśle z architektami, firmami projektowymi, producentami materiałów budowlanych i dostawcami usług budowlanych.
+            Podczas realizacji platformy Homeeer współpracowaliśmy ściśle z architektami, firmami projektowymi, producentami materiałów budowlanych i dostawcami usług budowlanych.
             <br></br>
             <br></br>  
             <br></br>
