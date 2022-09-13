@@ -35,6 +35,7 @@ z-index: 5;
     justify-content: center;
     text-align: center;
     font-size: 2rem;
+    left: 5%;
   }
  
 

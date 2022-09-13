@@ -33,7 +33,7 @@ h2{
 .Wrapper{
     display: grid; 
     grid-template-columns: repeat(auto-fit,
-        minmax(16rem, 19rem));
+        minmax(15rem, 23rem));
     gap: 5rem;
     justify-content: center;
     margin-bottom: 10%;
@@ -262,7 +262,7 @@ const Cooperation = () => {
             title="Wspołpraca z tooba.pl."
             description="Działamy razem z tooba.pl, 
             co przekłada się na 10 000 sprzedanych projektów domów każdego roku, 
-            w których mogą zawarte być Twoje produkty!"
+            w których mogą być zawarte Twoje produkty!"
             />
             <Card 
             img = {img6}
